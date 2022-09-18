@@ -103,7 +103,7 @@ pre{
     position: fixed;
     z-index: 3;
     top: 0;
-    left: 0;
+    right: 0;
     bottom: 0;
     width: 300px;
     box-sizing: border-box;
@@ -193,7 +193,7 @@ pre{
 .content-page {
     position: relative;
     box-sizing: border-box;
-    margin-left: 300px;
+    margin-right: 300px;
     z-index: 2;
     background-color: #fff;
     min-height: 100%;
@@ -202,7 +202,7 @@ pre{
 .content-code{
     width: 50%;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     bottom: 0;
     background-color: #323f4c;
@@ -225,15 +225,15 @@ pre{
 .content ul,
 .content ol,
 .content .central-overflow-x {
-    margin-right: 50%;
+    margin-left: 50%;
     padding: 0 28px;
     box-sizing: border-box;
     display: block;
     max-width: 680px;
 }
 .content .central-overflow-x {
-    margin-right: calc(50% + 28px);
-    margin-left: 28px;
+    margin-left: calc(50% + 28px);
+    margin-right: 28px;
     padding: 0;
     overflow-y: hidden;
     max-width: 100%;
@@ -285,8 +285,8 @@ pre{
     padding: 0 28px 2em;
     margin: 0;
     width: 50%;
-    float: right;
-    clear: right;
+    float: left;
+    clear: left;
     box-sizing: border-box;
 }
 .content pre code, .content pre {
@@ -298,6 +298,7 @@ pre{
 .content pre code{
     padding-top: 0;
     margin-top: 0;
+    text-align: end;
 }
 .content pre code{
     margin-top: -2em;
@@ -316,12 +317,12 @@ pre{
     padding: 5px 18px 5px 0;
     border-bottom: 1px solid #ccc;
     vertical-align: bottom;
-    text-align: left;
+    text-align: right;
     line-height: 1.6;
 }
 .content table td {
     padding: 5px 18px 5px 0;
-    text-align: left;
+    text-align: right;
     vertical-align: top;
     line-height: 1.6;
     font-family: 'Roboto', sans-serif;
@@ -470,7 +471,7 @@ body.one-content-column-version .content thead {
         top: 0;
         bottom: 0;
         right: -405px;
-        left: auto;
+        right: auto;
         background-color: #fff;
         margin: 0;
         overflow-x: hidden;
@@ -510,7 +511,7 @@ body.one-content-column-version .content thead {
         margin-right: 65px;
     }
     .content-page{
-        margin-left: 0;
+        margin-right: 0;
         padding-top: 83px;
     }
     .burger-menu-icon {
