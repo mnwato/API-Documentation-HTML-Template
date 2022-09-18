@@ -23,6 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css" media="all">
     <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        .text{
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body dir="rtl">
@@ -107,115 +112,20 @@
             https://bourse-trend-api.ir
                 </pre>
             <p>
-                به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
-                پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
-                همچنین با توجه به احتمال ایجاد تغییرات در بستر بورس ترند یا ساختار و جزئیات APIها، همواره به اطلاعیه های سایت و کانال رسمی تلگرام بورس ترند دقت کنید. به علاوه به صورت مستمر صفحه سابقه تغییرات API بورس ترند را رصد کندی تا از تمامی تغییرات API با خبر شوید.<br>
-
+                برای احراز هویت در ریکویست های ارسالی باید از توکن صادر شده در حساب کاربری استفاده کنید.
             </p>
             <p>
-                برای استفاده از API های زیر نیاز به ایجاد حساب کاربری و خرید تعرفه متناسب با نیاز خود دارید. برای این منظور به صفحه اصلی سایت مراجعه کنید.
+                به اینصورت که در هدر ریکویست ارسالی اطلاعات زیر را ارسال کنید:
+            </p>
+            <p align="left">
+                {"Authorization": "Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a"}
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-get-started-limits">
             <h1>محدودیت ها</h1>
-            <pre>
-            API Endpoint
-
-            https://bourse-trend-api.ir
-                </pre>
             <p>
-                به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
-                پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
-                همچنین با توجه به احتمال ایجاد تغییرات در بستر بورس ترند یا ساختار و جزئیات APIها، همواره به اطلاعیه های سایت و کانال رسمی تلگرام بورس ترند دقت کنید. به علاوه به صورت مستمر صفحه سابقه تغییرات API بورس ترند را رصد کندی تا از تمامی تغییرات API با خبر شوید.<br>
-
+                جهت ارائه خدمات بهتر و پایدارتر محدودیت های زیر وضع شده است که در صورت نقض آنها به مدت فلان مدت بلاک خواهید شد و ریکویست های شما با خطای فلان مواجه خواهد شد.
             </p>
-            <p>
-                برای استفاده از API های زیر نیاز به ایجاد حساب کاربری و خرید تعرفه متناسب با نیاز خود دارید. برای این منظور به صفحه اصلی سایت مراجعه کنید.
-            </p>
-        </div>
-        <div class="overflow-hidden content-section" id="content-how-to-start">
-            <h2>راهنمای کار با API</h2>
-            <pre><code class="bash">
-            # Here is a curl example
-            curl \
-            -X POST http://api.westeros.com/character/get \
-            -F 'secret_key=your_api_key' \
-            -F 'house=Stark,Bolton' \
-            -F 'offset=0' \
-            -F 'limit=50'
-                </code></pre>
-            <p>
-                To get characters you need to make a POST call to the following url :<br>
-                <code class="higlighted break-word">http://api.westeros.com/character/get</code>
-            </p>
-            <br>
-            <pre><code class="json">
-            Result example :
-
-            {
-            query:{
-                offset: 0,
-                limit: 50,
-                house: [
-                "Stark",
-                "Bolton"
-                ],
-            }
-            result: [
-                {
-                id: 1,
-                first_name: "Jon",
-                last_name: "Snow",
-                alive: true,
-                house: "Stark",
-                gender: "m",
-                age: 14,
-                location: "Winterfell"
-                },
-                {
-                id: 2,
-                first_name: "Eddard",
-                last_name: "Stark",
-                alive: false,
-                house: "Stark",
-                gender: "m",
-                age: 35,
-                location: 'Winterfell'
-                },
-                {
-                id: 3,
-                first_name: "Catelyn",
-                last_name: "Stark",
-                alive: false,
-                house: "Stark",
-                gender: "f",
-                age: 33,
-                location: "Winterfell"
-                },
-                {
-                id: 4,
-                first_name: "Roose",
-                last_name: "Bolton",
-                alive: false,
-                house: "Bolton",
-                gender: "m",
-                age: 40,
-                location: "Dreadfort"
-                },
-                {
-                id: 5,
-                first_name: "Ramsay",
-                last_name: "Snow",
-                alive: false,
-                house: "Bolton",
-                gender: "m",
-                age: 15,
-                location: "Dreadfort"
-                },
-            ]
-            }
-                </code></pre>
-            <h4>QUERY PARAMETERS</h4>
             <table class="central-overflow-x">
                 <thead>
                 <tr>
@@ -270,9 +180,24 @@
                 </tr>
                 </tbody>
             </table>
+            <p class="text">
+                در صورتی که نیاز به سرویسی با شرایط متفاوت دارید لطفا از طریق راه های ارتباطی سایت به پشتیبانی اطلاع دهید.
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-how-to-start">
+            <h2>راهنمای کار با API</h2>
+            <p>
+                متن تست
+            </p>
         </div>
         <div class="overflow-hidden content-section" id="content-method-single">
             <h1>اندپوینت نماد خاص</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/single</code>
+            </p>
             <pre>
                 API Endpoint
 
@@ -284,6 +209,12 @@
         </div>
         <div class="overflow-hidden content-section" id="content-method-all">
             <h1>اندپوینت همه نمادها</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/methodall</code>
+            </p>
             <pre>
                 API Endpoint
 
@@ -295,6 +226,12 @@
         </div>
         <div class="overflow-hidden content-section" id="content-basis-vol">
             <h1>اندپوینت حجم مبنا</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/basisVolume</code>
+            </p>
             <pre>
                 API Endpoint
 
@@ -306,6 +243,12 @@
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-bourse">
             <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص بورس</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/tasir_dar_shakhes_bourse</code>
+            </p>
             <pre>
                 API Endpoint
 
@@ -317,6 +260,12 @@
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-farabourse">
             <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص فرابورس</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/tasir_dar_shakhes_farabourse</code>
+            </p>
             <pre>
                 API Endpoint
 
@@ -328,6 +277,12 @@
         </div>
         <div class="overflow-hidden content-section" id="content-indexes-lists">
             <h1>اندپوینت لیست شاخص ها</h1>
+            <p>
+                متد این اندپوینت <strong>GET</strong> است
+            </p>
+            <p align="left">
+                <code class="higlighted break-word">https://bourse-trend-api/api/constants</code>
+            </p>
             <pre>
                 API Endpoint
 
