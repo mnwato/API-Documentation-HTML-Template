@@ -30,7 +30,7 @@
     <div class="content-logo">
         <div class="logo">
             <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
-            <span>API Documentation</span>
+            <span>مستندات وب سرویس بورس ترند</span>
         </div>
         <button class="burger-menu-icon" id="button-menu-mobile">
             <svg width="34" height="34" viewBox="0 0 100 100"><path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path><path class="line line2" d="M 20,50 H 80"></path><path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path></svg>
@@ -39,18 +39,42 @@
     <div class="mobile-menu-closer"></div>
     <div class="content-menu">
         <div class="content-infos">
-            <div class="info"><b>Version:</b> 1.0.5</div>
-            <div class="info"><b>Last Updated:</b> 15th Sep, 2021</div>
+            <div class="info"><b>نسخه:</b> 1.1</div>
+            <div class="info"><b>آخرین بروز رسانی:</b> 27-06-1401</div>
         </div>
         <ul>
             <li class="scroll-to-link active" data-target="content-get-started">
-                <a>GET STARTED</a>
+                <a>مستندات وب سرویس بورس ترند</a>
             </li>
-            <li class="scroll-to-link" data-target="content-get-characters">
-                <a>Get Characters</a>
+            <li class="scroll-to-link active" data-target="content-get-started-auth">
+                <a>احراز هویت</a>
+            </li>
+            <li class="scroll-to-link active" data-target="content-get-started-limits">
+                <a>محدودیت ها</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-how-to-start">
+                <a>راهنمای کار با API</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-method-single">
+                <a>اطلاعات تک نماد</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-method-all">
+                <a>اطلاعات کل نمادها</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-basis-vol">
+                <a>تغییرات حجم مبنا</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-most-effective-symbols-bourse">
+                <a>نمادهای تاثیرگذار در بورس</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-most-effective-symbols-farabourse">
+                <a>نمادهای تاثیرگذار در فرابورس</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-indexes-lists">
+                <a>لیست شاخص ها</a>
             </li>
             <li class="scroll-to-link" data-target="content-errors">
-                <a>Errors</a>
+                <a>خطاها</a>
             </li>
         </ul>
     </div>
@@ -59,29 +83,66 @@
     <div class="content-code"></div>
     <div class="content">
         <div class="overflow-hidden content-section" id="content-get-started">
-            <h1>Get started</h1>
+            <h1>مستندات وب سرویس بورس ترند</h1>
             <pre>
-    API Endpoint
+            API Endpoint
 
-        https://api.westeros.com/
+            https://bourse-trend-api.ir
                 </pre>
             <p>
-                The Westeros API provides programmatic access to read Game of Thrones data. Retrieve a character, provide an oauth connexion, retrieve a familly, filter them, etc.
+                به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
+                پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
+                همچنین با توجه به احتمال ایجاد تغییرات در بستر بورس ترند یا ساختار و جزئیات APIها، همواره به اطلاعیه های سایت و کانال رسمی تلگرام بورس ترند دقت کنید. به علاوه به صورت مستمر صفحه سابقه تغییرات API بورس ترند را رصد کندی تا از تمامی تغییرات API با خبر شوید.<br>
+
             </p>
             <p>
-                To use this API, you need an <strong>API key</strong>. Please contact us at <a href="mailto:jon.snow@nightswatch.wes">jon.snow@nightswatch.wes</a> to get your own API key.
+                برای استفاده از API های زیر نیاز به ایجاد حساب کاربری و خرید تعرفه متناسب با نیاز خود دارید. برای این منظور به صفحه اصلی سایت مراجعه کنید.
             </p>
         </div>
-        <div class="overflow-hidden content-section" id="content-get-characters">
-            <h2>get characters</h2>
+        <div class="overflow-hidden content-section" id="content-get-started-auth">
+            <h1>احراز هویت</h1>
+            <pre>
+            API Endpoint
+
+            https://bourse-trend-api.ir
+                </pre>
+            <p>
+                به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
+                پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
+                همچنین با توجه به احتمال ایجاد تغییرات در بستر بورس ترند یا ساختار و جزئیات APIها، همواره به اطلاعیه های سایت و کانال رسمی تلگرام بورس ترند دقت کنید. به علاوه به صورت مستمر صفحه سابقه تغییرات API بورس ترند را رصد کندی تا از تمامی تغییرات API با خبر شوید.<br>
+
+            </p>
+            <p>
+                برای استفاده از API های زیر نیاز به ایجاد حساب کاربری و خرید تعرفه متناسب با نیاز خود دارید. برای این منظور به صفحه اصلی سایت مراجعه کنید.
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-get-started-limits">
+            <h1>محدودیت ها</h1>
+            <pre>
+            API Endpoint
+
+            https://bourse-trend-api.ir
+                </pre>
+            <p>
+                به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
+                پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
+                همچنین با توجه به احتمال ایجاد تغییرات در بستر بورس ترند یا ساختار و جزئیات APIها، همواره به اطلاعیه های سایت و کانال رسمی تلگرام بورس ترند دقت کنید. به علاوه به صورت مستمر صفحه سابقه تغییرات API بورس ترند را رصد کندی تا از تمامی تغییرات API با خبر شوید.<br>
+
+            </p>
+            <p>
+                برای استفاده از API های زیر نیاز به ایجاد حساب کاربری و خرید تعرفه متناسب با نیاز خود دارید. برای این منظور به صفحه اصلی سایت مراجعه کنید.
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-how-to-start">
+            <h2>راهنمای کار با API</h2>
             <pre><code class="bash">
-# Here is a curl example
-curl \
--X POST http://api.westeros.com/character/get \
--F 'secret_key=your_api_key' \
--F 'house=Stark,Bolton' \
--F 'offset=0' \
--F 'limit=50'
+            # Here is a curl example
+            curl \
+            -X POST http://api.westeros.com/character/get \
+            -F 'secret_key=your_api_key' \
+            -F 'house=Stark,Bolton' \
+            -F 'offset=0' \
+            -F 'limit=50'
                 </code></pre>
             <p>
                 To get characters you need to make a POST call to the following url :<br>
@@ -89,70 +150,70 @@ curl \
             </p>
             <br>
             <pre><code class="json">
-Result example :
+            Result example :
 
-{
-  query:{
-    offset: 0,
-    limit: 50,
-    house: [
-      "Stark",
-      "Bolton"
-    ],
-  }
-  result: [
-    {
-      id: 1,
-      first_name: "Jon",
-      last_name: "Snow",
-      alive: true,
-      house: "Stark",
-      gender: "m",
-      age: 14,
-      location: "Winterfell"
-    },
-    {
-      id: 2,
-      first_name: "Eddard",
-      last_name: "Stark",
-      alive: false,
-      house: "Stark",
-      gender: "m",
-      age: 35,
-      location: 'Winterfell'
-    },
-    {
-      id: 3,
-      first_name: "Catelyn",
-      last_name: "Stark",
-      alive: false,
-      house: "Stark",
-      gender: "f",
-      age: 33,
-      location: "Winterfell"
-    },
-    {
-      id: 4,
-      first_name: "Roose",
-      last_name: "Bolton",
-      alive: false,
-      house: "Bolton",
-      gender: "m",
-      age: 40,
-      location: "Dreadfort"
-    },
-    {
-      id: 5,
-      first_name: "Ramsay",
-      last_name: "Snow",
-      alive: false,
-      house: "Bolton",
-      gender: "m",
-      age: 15,
-      location: "Dreadfort"
-    },
-  ]
-}
+            {
+            query:{
+                offset: 0,
+                limit: 50,
+                house: [
+                "Stark",
+                "Bolton"
+                ],
+            }
+            result: [
+                {
+                id: 1,
+                first_name: "Jon",
+                last_name: "Snow",
+                alive: true,
+                house: "Stark",
+                gender: "m",
+                age: 14,
+                location: "Winterfell"
+                },
+                {
+                id: 2,
+                first_name: "Eddard",
+                last_name: "Stark",
+                alive: false,
+                house: "Stark",
+                gender: "m",
+                age: 35,
+                location: 'Winterfell'
+                },
+                {
+                id: 3,
+                first_name: "Catelyn",
+                last_name: "Stark",
+                alive: false,
+                house: "Stark",
+                gender: "f",
+                age: 33,
+                location: "Winterfell"
+                },
+                {
+                id: 4,
+                first_name: "Roose",
+                last_name: "Bolton",
+                alive: false,
+                house: "Bolton",
+                gender: "m",
+                age: 40,
+                location: "Dreadfort"
+                },
+                {
+                id: 5,
+                first_name: "Ramsay",
+                last_name: "Snow",
+                alive: false,
+                house: "Bolton",
+                gender: "m",
+                age: 15,
+                location: "Dreadfort"
+                },
+            ]
+            }
                 </code></pre>
             <h4>QUERY PARAMETERS</h4>
             <table class="central-overflow-x">
@@ -210,16 +271,82 @@ Result example :
                 </tbody>
             </table>
         </div>
-        <div class="overflow-hidden content-section" id="content-errors">
-            <h2>Errors</h2>
+        <div class="overflow-hidden content-section" id="content-method-single">
+            <h1>اندپوینت نماد خاص</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/single
+            </pre>
             <p>
-                The Westeros API uses the following error codes:
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-method-all">
+            <h1>اندپوینت همه نمادها</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/methodall
+            </pre>
+            <p>
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-basis-vol">
+            <h1>اندپوینت حجم مبنا</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/basisVolume
+            </pre>
+            <p>
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-most-effective-symbols-bourse">
+            <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص بورس</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/tasir_dar_shakhes_bourse
+            </pre>
+            <p>
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-most-effective-symbols-farabourse">
+            <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص فرابورس</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/tasir_dar_shakhes_farabourse
+            </pre>
+            <p>
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-indexes-lists">
+            <h1>اندپوینت لیست شاخص ها</h1>
+            <pre>
+                API Endpoint
+
+                https://bourse-trend-api.ir/api/constants
+            </pre>
+            <p>
+                متن تست
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-errors">
+            <h2>خطاها</h2>
+            <p>
+                در این قسمت لیستی از خطاهای احتمالی آورده شده است:
             </p>
             <table>
                 <thead>
                 <tr>
-                    <th>Error Code</th>
-                    <th>Meaning</th>
+                    <th>کد خطا</th>
+                    <th>توضیح</th>
                 </tr>
                 </thead>
                 <tbody>
