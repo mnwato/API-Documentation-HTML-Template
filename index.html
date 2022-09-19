@@ -34,7 +34,7 @@
 <div class="left-menu">
     <div class="content-logo">
         <div class="logo">
-            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
+            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/app_icon_128.png" height="32" />
             <span>مستندات وب سرویس بورس ترند</span>
         </div>
         <button class="burger-menu-icon" id="button-menu-mobile">
@@ -89,11 +89,6 @@
     <div class="content">
         <div class="overflow-hidden content-section" id="content-get-started">
             <h1>مستندات وب سرویس بورس ترند</h1>
-            <pre>
-            API Endpoint
-
-            https://bourse-trend-api.ir
-                </pre>
             <p>
                 به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
                 پیش از استفاده از API بورس ترند اطمینان حاصل کنید که با قوانین بورس ترند و همچنین قوانین و شرایط استفاده از api بورس ترند آشنایی کامل دارید.<br>
@@ -106,16 +101,9 @@
         </div>
         <div class="overflow-hidden content-section" id="content-get-started-auth">
             <h1>احراز هویت</h1>
-            <pre>
-            API Endpoint
-
-            https://bourse-trend-api.ir
-                </pre>
             <p>
-                برای احراز هویت در ریکویست های ارسالی باید از توکن صادر شده در حساب کاربری استفاده کنید.
-            </p>
-            <p>
-                به اینصورت که در هدر ریکویست ارسالی اطلاعات زیر را ارسال کنید:
+                برای احراز هویت در ریکویست های ارسالی باید از توکن صادر شده در حساب کاربری خود استفاده نمایید.<br>
+                برای این منظور مشابه نمونه کد روبرو در هدر درخواست ها باید اطلاعات زیر را بفرستید.
             </p>
             <p align="left">
                 {"Authorization": "Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a"}
@@ -124,62 +112,8 @@
         <div class="overflow-hidden content-section" id="content-get-started-limits">
             <h1>محدودیت ها</h1>
             <p>
-                جهت ارائه خدمات بهتر و پایدارتر محدودیت های زیر وضع شده است که در صورت نقض آنها به مدت فلان مدت بلاک خواهید شد و ریکویست های شما با خطای فلان مواجه خواهد شد.
+                جهت ارائه خدمات بهتر و پایدارتر محدودیت هایی وجود دارد که در قسمت توضیحات هر کدام از APIها توضیح داده شده است.
             </p>
-            <table class="central-overflow-x">
-                <thead>
-                <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>secret_key</td>
-                    <td>String</td>
-                    <td>Your API key.</td>
-                </tr>
-                <tr>
-                    <td>search</td>
-                    <td>String</td>
-                    <td>(optional) A search word to find character by name.</td>
-                </tr>
-                <tr>
-                    <td>house</td>
-                    <td>String</td>
-                    <td>
-                        (optional) a string array of houses:
-                    </td>
-                </tr>
-                <tr>
-                    <td>alive</td>
-                    <td>Boolean</td>
-                    <td>
-                        (optional) a boolean to filter alived characters
-                    </td>
-                </tr>
-                <tr>
-                    <td>gender</td>
-                    <td>String</td>
-                    <td>
-                        (optional) a string to filter character by gender:<br>
-                        m: male<br>
-                        f: female
-                    </td>
-                </tr>
-                <tr>
-                    <td>offset</td>
-                    <td>Integer</td>
-                    <td>(optional - default: 0) A cursor for use in pagination. Pagination starts offset the specified offset.</td>
-                </tr>
-                <tr>
-                    <td>limit</td>
-                    <td>Integer</td>
-                    <td>(optional - default: 10) A limit on the number of objects to be returned, between 1 and 100.</td>
-                </tr>
-                </tbody>
-            </table>
             <p class="text">
                 در صورتی که نیاز به سرویسی با شرایط متفاوت دارید لطفا از طریق راه های ارتباطی سایت به پشتیبانی اطلاع دهید.
             </p>
@@ -187,8 +121,20 @@
         <div class="overflow-hidden content-section" id="content-how-to-start">
             <h2>راهنمای کار با API</h2>
             <p>
-                متن تست
+                اگر برای اولین بار از API نوبیتکس یا سایر بازارهای رمزارز استفاده می‌کنید، برای شروع کار پیشنهاد می‌شود گام‌های زیر را طی کنید:
             </p>
+            <ul>
+                <li>
+                    برای شروع کار با API ابتدا در سایت بورس ترند ثبت نام کنید.
+                </li>
+                <li>
+                    پس از ثبت نام با ورود به پنل کاربری میتوانید توکن خود را دریافت کنید. دسترسی به این توکن به منزله دسترسی کامل به تمام APIها است. لذا در حفاظت از آن دقت کامل داشته باشید.
+                </li>
+                <li>
+                    همچنین توجه داشته باشید که برای استفاده از توکن باید یکی از پلن های بخش تعرفه هارا خریداری نمایید.<br>
+                    (برای تست سرویس ها میتوانید از پلن رایگان استفاده نمایید)
+                </li>
+            </ul>
         </div>
         <div class="overflow-hidden content-section" id="content-method-single">
             <h1>اندپوینت نماد خاص</h1>
@@ -204,8 +150,152 @@
                 https://bourse-trend-api.ir/api/single
             </pre>
             <p>
-                متن تست
+                برای دریافت کلیه اطلاعات مربوط به یک نماد خاص از این درخواست استفاده نمایید:
             </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/single/instcode</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                برای دریافت پاسخ حتما از متد GET و با ارسال کد نماد مورد نظر در url استفاده نمایید.<br>
+                نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+            </aside>
+            <h3>
+                پارامترهای ورودی
+            </h3>
+            <table><thead>
+                <tr>
+                <th>پارامتر</th>
+                <th>نوع</th>
+                <th>پیش‌فرض</th>
+                <th>توضیحات</th>
+                <th>نمونه</th>
+                </tr>
+                </thead><tbody>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>نماد بازار</td>
+                <td><code>BTCIRT</code></td>
+                </tr>
+                </tbody></table>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح نتیجه ای مشابه روبرو دریافت خواهید کرد که شامل اطلاعات زیر برای هر نماد است.<br>
+                برای درخواست هایی که در حین فعالیت بازار ارسال شوند داده های لحظه ای برگردانده خواهد شد.
+            </p>
+            <table><thead>
+                <tr>
+                <th>پارامتر</th>
+                <th>توضیح</th>
+                <th>نوع</th>
+                <th>نمونه</th>
+                </tr>
+                </thead><tbody>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                </tbody></table>
         </div>
         <div class="overflow-hidden content-section" id="content-method-all">
             <h1>اندپوینت همه نمادها</h1>
@@ -221,8 +311,136 @@
                 https://bourse-trend-api.ir/api/methodall
             </pre>
             <p>
-                متن تست
+                برای دریافت اطلاعات تمام نمادهای بازار از این درخواست استفاده نمایید:
             </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/methodall</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                برای دریافت پاسخ حتما از متد GET و با ارسال کد نماد مورد نظر در url استفاده نمایید.<br>
+                نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+            </aside>
+            <h3>
+                <strong class="text">پارامتر ورودی: </strong>
+                ندارد
+            </h3>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح برای هر نماد نتیجه ای مشابه روبرو دریافت خواهید کرد که شامل اطلاعات زیر برای هر نماد است.<br>
+                برای درخواست هایی که در حین فعالیت بازار ارسال شوند داده های لحظه ای برگردانده خواهد شد.
+            </p>
+            <table><thead>
+                <tr>
+                <th>پارامتر</th>
+                <th>توضیح</th>
+                <th>نوع</th>
+                <th>نمونه</th>
+                </tr>
+                </thead><tbody>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+                <tr>
+                <td>SYMBOL</td>
+                <td>string</td>
+                <td>الزامی</td>
+                <td>الزامی</td>
+                </tr>
+            </tbody></table>
         </div>
         <div class="overflow-hidden content-section" id="content-basis-vol">
             <h1>اندپوینت حجم مبنا</h1>
@@ -238,7 +456,43 @@
                 https://bourse-trend-api.ir/api/basisVolume
             </pre>
             <p>
-                متن تست
+                برای دریافت اطلاعات حجم مبنای تمام نمادهای بازار از این درخواست استفاده نمایید:
+            </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/basisVolume</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                <li>
+                    برای دریافت پاسخ حتما از متد GET استفاده نمایید.                    
+                </li>
+                
+                <li>
+                    توجه داشته باشید که نرخ بروز رسانی داده های این API از سمت سازمان 20 دقیقه یکبار است. لذا به درخواست های در فواصل کوتاه تر پاسخ تکراری برگردانده خواهد شد.
+                </li>
+                <li>
+                    نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+                </li>
+            </aside>
+            <h3>
+                <strong class="text">پارامتر ورودی: </strong>
+                ندارد
+            </h3>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح مشابه روبرو لیستی از نمادها به همراه حجم مبنای آنها برگردانده خواهد شد
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-bourse">
@@ -255,7 +509,35 @@
                 https://bourse-trend-api.ir/api/tasir_dar_shakhes_bourse
             </pre>
             <p>
-                متن تست
+                برای دریافت لیست نمادهای با بیشترین تاثیر در شاخص بورس از این درخواست استفاده کنید
+            </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/tasir_dar_shakhes_bourse</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                برای دریافت پاسخ حتما از متد GET استفاده نمایید.<br>
+                 نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+            </aside>
+            <h3>
+                <strong class="text">پارامتر ورودی: </strong>
+                ندارد
+            </h3>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح مشابه روبرو لیستی نمادهایی که بیشترین تاثیر را بر شاخص بورس داشته اند نمایش داده خواهد شد.
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-farabourse">
@@ -272,7 +554,35 @@
                 https://bourse-trend-api.ir/api/tasir_dar_shakhes_farabourse
             </pre>
             <p>
-                متن تست
+                برای دریافت لیست نمادهای با بیشترین تاثیر در شاخص فرابورس از این درخواست استفاده کنید
+            </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/tasir_dar_shakhes_farabourse</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                برای دریافت پاسخ حتما از متد GET استفاده نمایید.<br>
+                 نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+            </aside>
+            <h3>
+                <strong class="text">پارامتر ورودی: </strong>
+                ندارد
+            </h3>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح مشابه روبرو لیستی نمادهایی که بیشترین تاثیر را بر شاخص فرابورس داشته اند نمایش داده خواهد شد.
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-indexes-lists">
@@ -289,7 +599,35 @@
                 https://bourse-trend-api.ir/api/constants
             </pre>
             <p>
-                متن تست
+                برای دریافت لیست شاخص ها از این درخواست استفاده نمایید:
+            </p>
+            <ul>
+                <li>
+                    <strong class="text">درخواست: </strong>
+                    <code>GET /api/constants</code>
+                </li>
+                <li>
+                    <strong class="text">محدودیت فراخوانی: </strong>
+                    60 درخواست در دقیقه
+                </li>
+                <li>
+                    <strong class="text">نیاز به ارسال توکن: </strong>
+                    دارد
+                </li>
+            </ul>
+            <aside>
+                برای دریافت پاسخ حتما از متد GET استفاده نمایید.<br>
+                 نمونه ای در شکل صحیح این درخواست در روبرو آورده شده است.
+            </aside>
+            <h3>
+                <strong class="text">پارامتر ورودی: </strong>
+                ندارد
+            </h3>
+            <h3>
+                پارامترهای پاسخ
+            </h3>
+            <p>
+                در صورت فراخوانی صحیح مشابه روبرو لیستی از شاخص صنایع مختلف به همراه کد آنها برگردانده خواهد شد.
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-errors">
@@ -306,25 +644,25 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>X000</td>
+                    <td>00X</td>
                     <td>
                         Some parameters are missing. This error appears when you don't pass every mandatory parameters.
                     </td>
                 </tr>
                 <tr>
-                    <td>X001</td>
+                    <td>10X</td>
                     <td>
                         Unknown or unvalid <code class="higlighted">secret_key</code>. This error appears if you use an unknow API key or if your API key expired.
                     </td>
                 </tr>
                 <tr>
-                    <td>X002</td>
+                    <td>20X</td>
                     <td>
                         Unvalid <code class="higlighted">secret_key</code> for this domain. This error appears if you use an  API key non specified for your domain. Developper or Universal API keys doesn't have domain checker.
                     </td>
                 </tr>
                 <tr>
-                    <td>X003</td>
+                    <td>30X</td>
                     <td>
                         Unknown or unvalid user <code class="higlighted">token</code>. This error appears if you use an unknow user <code class="higlighted">token</code> or if the user <code class="higlighted">token</code> expired.
                     </td>
