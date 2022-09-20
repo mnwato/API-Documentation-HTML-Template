@@ -1,4 +1,19 @@
 @charset "utf-8";
+@font-face {
+    font-family: "yekan";
+    src:url(fonts/Yekan.eot) ,
+    url(fonts/Yekan.eot?#iefix) format("embedded-opentype"),
+    url(fonts/Yekan.woff) format("woff"),
+    url(fonts/Yekan.ttf) format("truetype"),
+    url(fonts/Yekan.svg#BYekan) format("svg");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0600-06FF;
+}
+
+body {
+    font-family: yekan;
+}
 
 /* RESET
 ----------------------------------------------------------------------------------------*/
@@ -20,7 +35,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size:100%;
-    font: inherit;
+    font-family: yekan;
     vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -148,7 +163,7 @@ pre{
 }
 .content-menu{
     margin: 2em auto 2em;
-    padding: 0 0 100px;
+    /*padding: 0 0 100px;*/
 }
 .content-menu ul{
     list-style: none;
