@@ -214,13 +214,44 @@ pre{
     min-height: 100%;
     padding-bottom: 1px;
 }
+.lang-selector {
+    text-align: left;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 300;
+    background-color: #252626;
+}
+
+.demo{
+    z-index: 300;
+}
+
+.button{
+    color: white;
+    background: none;
+    padding: 10px;
+    border: none;
+}
+.button:focus{
+    background-color: #33383b;
+    padding: 10px;
+    border: none;
+}
+.button:active{
+    background-color: #16191a;
+    padding: 10px;
+    border: none;
+}
+
 .content-code{
     width: 50%;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #323f4c;
+    background-color: #33383b;
     border-color: #323f4c;
 }
 .content {
@@ -294,7 +325,7 @@ pre{
 }
 .content pre,
 .content blockquote {
-    background-color: #323f4c;
+    background-color: #2e3336;
     border-color: #323f4c;
     color: #fff;
     padding: 0 28px 2em;
