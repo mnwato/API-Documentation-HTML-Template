@@ -1,4 +1,19 @@
 @charset "utf-8";
+@font-face {
+    font-family: "yekan";
+    src:url(fonts/Yekan.eot) ,
+    url(fonts/Yekan.eot?#iefix) format("embedded-opentype"),
+    url(fonts/Yekan.woff) format("woff"),
+    url(fonts/Yekan.ttf) format("truetype"),
+    url(fonts/Yekan.svg#BYekan) format("svg");
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0600-06FF;
+}
+
+body {
+    font-family: yekan;
+}
 
 /* RESET
 ----------------------------------------------------------------------------------------*/
@@ -20,7 +35,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size:100%;
-    font: inherit;
+    font-family: yekan;
     vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -69,20 +84,23 @@ i{
 }
 p, .content ul, .content ol{
     font-size: 14px;
-    color: #777A7A;
+    color: #5c5d5e;
     margin-bottom: 16px;
     line-height: 1.6;
     font-weight: 300;
 }
 .content h1:first-child{
+    background-color: #fbfbfb;
     font-size: 1.333em;
-    color: #034c8f;
-    padding-top: 2.5em;
+    color: #333333;
     text-transform: uppercase;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    border-top-width: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /*border-top-width: 0;*/
     margin-top: 0;
-    margin-bottom: 1.3em;
+    margin-bottom: 0.9em;
     clear: both;
 }
 
@@ -107,14 +125,15 @@ pre{
     bottom: 0;
     width: 300px;
     box-sizing: border-box;
-    background-color: #f4f5f8;
+    background-color: #2e3336;
     overflow-x: hidden;
-    font-size: 18px;
+    /*font-size: 18px;*/
 }
 .left-menu .content-infos {
     position: relative;
     padding: 12px 13.25%;
     margin-bottom: 20px;
+    margin-top: -20px;
 }
 .left-menu .info {
     position: relative;
@@ -124,7 +143,16 @@ pre{
 }
 .left-menu .info b {
     font-weight: 500;
-    color: #034c8f;
+    color: #ffffff;
+}
+img{
+    width: 100px;
+}
+.logo{
+    padding-top: 0;
+    padding-right: 5px;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 .content-logo{
     position: relative;
@@ -132,7 +160,8 @@ pre{
     width: 100%;
     box-sizing: border-box;
     padding: 1.425em 11.5%;
-    padding-right: 0;
+    padding-right: 30px;
+    text-align: center;
 }
 .content-logo img{
     display: inline-block;
@@ -143,12 +172,12 @@ pre{
     display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
-    color: #323F4C;
-    font-size: 1.1em;
+    color: #a2a2a2;
+    font-size: 0.9em;
 }
 .content-menu{
-    margin: 2em auto 2em;
-    padding: 0 0 100px;
+    margin: 0 auto 0;
+    /*padding: 0 0 100px;*/
 }
 .content-menu ul{
     list-style: none;
@@ -162,13 +191,16 @@ pre{
     padding: 0;
     line-height: 0;
 }
+.content-menu ul li{
+    color: #ffffff;
+}
 .content-menu ul li:hover,
 .content-menu ul li.active{
-    background-color:#DCDEE9;
+    background-color: #0f74d3;
 }
 .content-menu ul li:hover a,
 .content-menu ul li.active a{
-    color: #00a8e3;
+    color: #d7d6d6;
 }
 @media (hover: none) {
     .content-menu ul li:not(.active):hover {
@@ -179,7 +211,7 @@ pre{
     }
 }
 .content-menu ul li a{
-    padding: 12px 13.25%;
+    padding: 10px 12.25%;
     color: #777A7A;
     letter-spacing: 0.025em;
     line-height: 1.1;
@@ -195,17 +227,66 @@ pre{
     box-sizing: border-box;
     margin-right: 300px;
     z-index: 2;
-    background-color: #fff;
+    background-color: #f1f5f7;
     min-height: 100%;
     padding-bottom: 1px;
 }
+.lang-selector {
+    text-align: left;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 300;
+    background-color: #252626;
+}
+
+.demo{
+    z-index: 300;
+}
+
+.button{
+    color: white;
+    background: none;
+    padding: 10px;
+    border: none;
+}
+.button:focus{
+    background-color: #33383b;
+    padding: 10px;
+    border: none;
+}
+.button:active{
+    background-color: #16191a;
+    padding: 10px;
+    border: none;
+}
+.scrollTop{
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    padding: 10px 15px;
+    background-color: #282d2f;
+    border-radius: 5px;
+    /*border-radius: 1px solid #fff;*/
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    z-index: 300;
+}
+.scrollTop:hover{
+    background-color: #1d1e1e;
+}
+i{
+    color: white;
+}
+
 .content-code{
     width: 50%;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: #323f4c;
+    background-color: #33383b;
     border-color: #323f4c;
 }
 .content {
@@ -279,7 +360,7 @@ pre{
 }
 .content pre,
 .content blockquote {
-    background-color: #323f4c;
+    background-color: #2e3336;
     border-color: #323f4c;
     color: #fff;
     padding: 0 28px 2em;
