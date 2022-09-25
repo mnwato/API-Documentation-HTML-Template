@@ -21,9 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css" media="all">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8f59131934.js" crossorigin="anonymous"></script> <!-- font awesome icons-->
     <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="css/style.css" media="all">
     <style>
         .text{
             font-weight: bold;
@@ -35,7 +36,7 @@
 <div class="left-menu">
     <div class="content-logo">
         <div class="logo">
-            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logo.png" height="32" />
+            <img alt="بورس ترند" title="main logo" src="images/128S-model-1-Bourse-Trend.png"  />
             <span>مستندات وب سرویس بورس ترند</span>
         </div>
         <button class="burger-menu-icon" id="button-menu-mobile">
@@ -60,7 +61,6 @@
                         </li>
                     </ul>
             </li>
-
             <li class="scroll-to-link" data-target="content-how-to-start">
                 <a>راهنمای کار با API</a>
                     <ul>
@@ -93,6 +93,7 @@
 </div>
 <div class="content-page">
     <div class="content-code">
+
         <nav class="lang-selector">
             <div>
                 <button id="btn3" class="button">JavaScript</button>
@@ -101,52 +102,43 @@
                 <button id="btn" class="button">Shell</button>
             </div>
 
+                                        <!--  CHANGING CODE LANG BY CLASSNAME()  -->
             <script>
                 document.getElementById('btn').onclick = function() {
-                    document.getElementById('demo').innerHTML =
-                        'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir';
+                    var code = document.getElementsByClassName("api-code");
+                    var changedCode = code[0].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[1].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[3].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
-                document.getElementById('btn1').onclick = function() {
-                    document.getElementById('demo').innerHTML =
-                        'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir';
-                }
-                document.getElementById('btn2').onclick = function() {
-                    document.getElementById('demo').innerHTML =
-                        'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir';
-                }
-                document.getElementById('btn3').onclick = function() {
-                    document.getElementById('demo').innerHTML =
-                        'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir';
-                }
-            </script>
-            <script>
-                _e('btn').addEventListener('click', function() {
-                    _e('demo').innerHTML =
-                        'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir';
-                }, false);
-                _e('btn1').addEventListener('click', function() {
-                    _e('demo').innerHTML =
-                        'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir';
-                }, false);
-                _e('btn2').addEventListener('click', function() {
-                    _e('demo').innerHTML =
-                        'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir';
-                }, false);
-                _e('btn3').addEventListener('click', function() {
-                    _e('demo').innerHTML =
-                        'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir';
-                }, false);
 
-                function _e(id) {
-                    return document.getElementById(id);
+                document.getElementById('btn1').onclick = function() {
+                    var code = document.getElementsByClassName("api-code");
+                    var changedCode = code[0].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[1].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[3].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
+                }
+
+                document.getElementById('btn2').onclick = function() {
+                    var code = document.getElementsByClassName("api-code");
+                    var changedCode = code[0].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[1].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[3].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
+                }
+
+                document.getElementById('btn3').onclick = function() {
+                    var code = document.getElementsByClassName("api-code");
+                    var changedCode = code[0].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[1].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[3].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
             </script>
+
         </nav>
     </div>
     <div class="content">
         <div class="overflow-hidden content-section" id="content-get-started">
-            <h1>مستندات وب سرویس بورس ترند</h1>
-            <pre id="demo" >
+            <h1><b>مستندات وب سرویس بورس ترند</b></h1>
+            <pre class="api-code" >
             API Endpoint
 
             https://bourse-trend-api.ir
@@ -162,8 +154,8 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-get-started-auth">
-            <h1>احراز هویت</h1>
-            <pre>
+            <h1><b>احراز هویت</b></h1>
+            <pre class="api-code">
             API Endpoint
 
             https://bourse-trend-api.ir
@@ -179,7 +171,7 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-get-started-limits">
-            <h1>محدودیت ها</h1>
+            <h1><b>محدودیت ها</b></h1>
             <p>
                 جهت ارائه خدمات بهتر و پایدارتر محدودیت های زیر وضع شده است که در صورت نقض آنها به مدت فلان مدت بلاک خواهید شد و ریکویست های شما با خطای فلان مواجه خواهد شد.
             </p>
@@ -242,20 +234,20 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-how-to-start">
-            <h2>راهنمای کار با API</h2>
+            <h1><b>راهنمای کار با API</b></h1>
             <p>
                 متن تست
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-method-single">
-            <h1>اندپوینت نماد خاص</h1>
+            <h1><b>اندپوینت نماد خاص</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/single</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/single
@@ -265,14 +257,14 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-method-all">
-            <h1>اندپوینت همه نمادها</h1>
+            <h1><b>اندپوینت همه نمادها</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/methodall</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/methodall
@@ -282,14 +274,14 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-basis-vol">
-            <h1>اندپوینت حجم مبنا</h1>
+            <h1><b>اندپوینت حجم مبنا</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/basisVolume</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/basisVolume
@@ -299,14 +291,14 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-bourse">
-            <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص بورس</h1>
+            <h1><b>اندپوینت سهام های با بیشترین تاثیر در شاخص بورس</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/tasir_dar_shakhes_bourse</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/tasir_dar_shakhes_bourse
@@ -316,14 +308,14 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-most-effective-symbols-farabourse">
-            <h1>اندپوینت سهام های با بیشترین تاثیر در شاخص فرابورس</h1>
+            <h1><b>اندپوینت سهام های با بیشترین تاثیر در شاخص فرابورس</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/tasir_dar_shakhes_farabourse</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/tasir_dar_shakhes_farabourse
@@ -333,14 +325,14 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-indexes-lists">
-            <h1>اندپوینت لیست شاخص ها</h1>
+            <h1><b>اندپوینت لیست شاخص ها</b></h1>
             <p>
                 متد این اندپوینت <strong>GET</strong> است
             </p>
             <p align="left">
                 <code class="higlighted break-word">https://bourse-trend-api/api/constants</code>
             </p>
-            <pre>
+            <pre class="api-code">
                 API Endpoint
 
                 https://bourse-trend-api.ir/api/constants
@@ -350,7 +342,7 @@
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-errors">
-            <h2>خطاها</h2>
+            <h1><b>خطاها</b></h1>
             <p>
                 در این قسمت لیستی از خطاهای احتمالی آورده شده است:
             </p>
@@ -390,6 +382,18 @@
             </table>
         </div>
     </div>
+
+    <div onclick="scrollToTop()" class="scrollTop">
+        <i class="fa-solid fa-chevron-up"></i>
+        <script>
+
+            function scrollToTop(){
+                window.scrollTo(0,0);
+            }
+
+        </script>
+    </div>
+
     <div class="content-code"></div>
 </div>
 <!-- Github Corner Ribbon - to remove (Ribbon created with : http://tholman.com/github-corners/ )-->
