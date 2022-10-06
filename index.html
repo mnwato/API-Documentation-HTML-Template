@@ -47,8 +47,8 @@
     <div class="mobile-menu-closer"></div>
     <div class="content-menu">
         <div class="content-infos">
-            <div class="info"><b>نسخه:</b> 1.1</div>
-            <div class="info"><b>آخرین بروز رسانی:</b> 27-06-1401</div>
+            <div class="info"><b>نسخه:</b> 1.2</div>
+            <div class="info"><b>آخرین بروز رسانی:</b> 15-07-1401</div>
         </div>
         <ul>
 
@@ -85,38 +85,59 @@
 
         <nav class="lang-selector">
             <div>
-                <button id="btn3" class="button">JavaScript</button>
-                <button id="btn2" class="button">PHP</button>
-                <button id="btn1" class="button">Python</button>
-                <button id="btn" class="button">Shell</button>
+                <button id="js" class="button">JavaScript</button>
+                <button id="php" class="button">PHP</button>
+                <button id="python" class="button">Python</button>
+                <button id="shell" class="button">Shell</button>
             </div>
 
                                         <!--  CHANGING CODE LANG BY CLASSNAME()  -->
             <script>
-                document.getElementById('btn').onclick = function() {
+                document.getElementById('shell').onclick = function() {
                     var code = document.getElementsByClassName("api-code");
-                    var changedCode = code[0].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[0].innerText = 'curl https://bourse-trend-api.ir\n' + 'H Authorization: Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a-'
                     var changedCode = code[1].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
                     var changedCode = code[3].innerText = 'API Endpoint Shell\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
 
-                document.getElementById('btn1').onclick = function() {
+                document.getElementById('python').onclick = function() {
                     var code = document.getElementsByClassName("api-code");
-                    var changedCode = code[0].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[0].innerText = `import requests
+
+headers = {
+    'Authorization': 'Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a',
+}
+
+response = requests.get('http://bourse-trend-api.ir', headers=headers)`
                     var changedCode = code[1].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
                     var changedCode = code[3].innerText = 'API Endpoint Python\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
 
-                document.getElementById('btn2').onclick = function() {
+                document.getElementById('php').onclick = function() {
                     var code = document.getElementsByClassName("api-code");
-                    var changedCode = code[0].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[0].innerText = `<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'http://bourse-trend-api.ir');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Authorization' => 'Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a',
+]);
+
+$response = curl_exec($ch);
+
+curl_close($ch);`
                     var changedCode = code[1].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
                     var changedCode = code[3].innerText = 'API Endpoint PHP\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
 
-                document.getElementById('btn3').onclick = function() {
+                document.getElementById('js').onclick = function() {
                     var code = document.getElementsByClassName("api-code");
-                    var changedCode = code[0].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
+                    var changedCode = code[0].innerText = `fetch('http://bourse-trend-api.ir', {
+    headers: {
+        'Authorization': 'Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a'
+    }
+});`
                     var changedCode = code[1].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
                     var changedCode = code[3].innerText = 'API Endpoint JavaScript\n' + '\n' + 'https://bourse-trend-api.ir'
                 }
@@ -128,9 +149,8 @@
         <div class="overflow-hidden content-section" id="content-get-started">
             <h1><b>مستندات وب سرویس بورس ترند</b></h1>
             <pre class="api-code" >
-            API Endpoint
-
-            https://bourse-trend-api.ir
+                curl https://bourse-trend-api.ir
+        H Authorization: Token 2be7160838c17b25f0cb82cf230f627c45cb2c1a-
                 </pre>
             <p>
                 به مستندات وب سرویس های بورس ترند خوش آمدید.<br>
@@ -223,11 +243,12 @@
                     "name": "خودرو",
                     "instance_code": "65883838195688438",
                     "namad_code": "IRO1IKCO0001",
-                    "5_digits_namad_code": "IKCO1",
+                    "5digits_namad_code": "IKCO1",
                     "company_code": "IRO1IKCO0008",
                     "industry_code": "34",
                     "sub_industry_code": "3410",
-                    "full_name": "ایران\u200c خودرو",
+                    "company_name": "ایران‌ خودرو",
+                    "persian_30chars_name": "ایران‌ خودرو",
                     "latin_name": "Iran Khodro",
                     "type": "خودرو و ساخت قطعات",
                     "sub_type": "تولید وسایل نقلیه موتوری",
@@ -364,7 +385,7 @@
                     <td>IRO1IKCO0001</td>
                     </tr>
                     <tr>
-                    <td>digits_namad_code</td>
+                    <td>5digits_namad_code</td>
                     <td>کد 5 رقمی نماد</td>
                     <td>String</td>
                     <td>IKCO1</td>
@@ -388,10 +409,16 @@
                     <td>3410</td>
                     </tr>
                     <tr>
-                    <td>full_name</td>
+                    <td>company_name</td>
                     <td>نام کامل نماد</td>
                     <td>String</td>
                     <td>ايران‌ خودرو</td>
+                    </tr>
+                    <tr>
+                    <td>persian_30chars_name</td>
+                    <td>نام کامل نماد</td>
+                    <td>String</td>
+                    <td>ایران‌ خودرو</td>
                     </tr>
                     <tr>
                     <td>latin_name</td>
@@ -468,7 +495,7 @@
                     <tr>
                     <td>close_price_change</td>
                     <td>تغییرات آخرین قیمت</td>
-                    <td>float</td>
+                    <td>String</td>
                     <td>-7</td>
                     </tr>
                     <tr>
@@ -486,7 +513,7 @@
                     <tr>
                     <td>final_price_change</td>
                     <td>تغییرات قیمت پایانی</td>
-                    <td>float</td>
+                    <td>String</td>
                     <td>2</td>
                     </tr>
                     <tr>
@@ -678,25 +705,25 @@
                     <tr>
                     <td>co_buy_value</td>
                     <td>ارزش خرید حقوقی</td>
-                    <td>int</td>
+                    <td>String</td>
                     <td>269,856,204,581</td>
                     </tr>
                     <tr>
                     <td>real_buy_value</td>
                     <td>ارزش خرید حقیقی</td>
-                    <td>int</td>
+                    <td>String</td>
                     <td>370,908,627,543</td>
                     </tr>
                     <tr>
                     <td>co_sell_value</td>
                     <td>ارزش فروش حقوقی</td>
-                    <td>int</td>
+                    <td>String</td>
                     <td>47,370,715,407</td>
                     </tr>
                     <tr>
                     <td>real_sell_value</td>
                     <td>ارزش فروش حقیقی</td>
-                    <td>int</td>
+                    <td>String</td>
                     <td>593,394,116,717</td>
                     </tr>
                     <tr>
@@ -714,7 +741,7 @@
                     <tr>
                     <td>market_value</td>
                     <td>ارزش بازار</td>
-                    <td>int</td>
+                    <td>String</td>
                     <td>602105511728000</td>
                     </tr>
                 </tbody>
@@ -756,86 +783,86 @@
             </aside>
             <pre>
                 {
-                    "99467388766579":
-                    {
-                      "name": "ضهای7007",
-                      "instance_code": "99467388766579",
-                      "namad_code": "IRO9HWEB0091",
-                      "5_digits_namad_code": "0H091",
-                      "company_code": "IRO9HWEB0091",
-                      "industry_code": "73",
-                      "sub_industry_code": "7310",
-                      "full_name": "داده گسترعصرنوین-های وب",
-                      "latin_name": "HWEB-O-010710",
-                      "industry": "اطلاعات و ارتباطات",
-                      "sub_industry": "خدمات ارزش افزوده",
-                      "yesterday_price": "640",
-                      "market": null,
-                      "state": "مجاز",
-                      "last_update_time": "61:04:6",
-                      "first_price": "0",
-                      "min_price": "0",
-                      "max_price": "0",
-                      "close_price": "640",
-                      "close_price_change": 0,
-                      "close_price_change_percent": "0.0",
-                      "final_price": "640",
-                      "final_price_change": 0,
-                      "final_price_change_percent": "0.0",
-                      "eps": "",
-                      "highest_price": "0",
-                      "lowest_price": "0",
-                      "P:E": "0",
-                      "daily_price_high": "100000.00",
-                      "daily_price_low": "1.00",
-                      "1_sell_count": "1",
-                      "2_sell_count": "1",
-                      "3_sell_count": "0",
-                      "4_sell_count": "0",
-                      "5_sell_count": "0",
-                      "1_buy_count": "0",
-                      "2_buy_count": "0",
-                      "3_buy_count": "0",
-                      "4_buy_count": "0",
-                      "5_buy_count": "0",
-                      "1_buy_price": "0",
-                      "2_buy_price": "0",
-                      "3_buy_price": "0",
-                      "4_buy_price": "0",
-                      "5_buy_price": "0",
-                      "1_sell_price": "200",
-                      "2_sell_price": "260",
-                      "3_sell_price": "0",
-                      "4_sell_price": "0",
-                      "5_sell_price": "0",
-                      "1_buy_volume": "0",
-                      "2_buy_volume": "0",
-                      "3_buy_volume": "0",
-                      "4_buy_volume": "0",
-                      "5_buy_volume": "0",
-                      "1_sell_volume": "500",
-                      "2_sell_volume": "1",
-                      "3_sell_volume": "0",
-                      "4_sell_volume": "0",
-                      "5_sell_volume": "0",
-                      "real_buy_count": "0",
-                      "co_buy_count": "0",
-                      "real_sell_count": "0",
-                      "co_sell_count": "0",
-                      "real_buy_volume": "0",
-                      "co_buy_volume": "0",
-                      "real_sell_volume": "0",
-                      "co_sell_volume": "0",
-                      "basis_volume": "1",
-                      "all_stocks": "3318",
-                      "trade_volume": "0",
-                      "co_buy_value": 0,
-                      "real_buy_value": 0,
-                      "co_sell_value": 0,
-                      "real_sell_value": 0,
-                      "trade_value": "0",
-                      "trade_number": "0",
-                      "market_value": 2123520
+                "43362635835198978":{
+                    "name": "های وب",
+                    "instance_code": "43362635835198978",
+                    "namad_code": "IRO1HWEB0001",
+                    "5digits_namad_code": "HWEB1",
+                    "company_code": "IRO1HWEB0008",
+                    "industry_code": "73",
+                    "sub_industry_code": "7310",
+                    "company_name": "داده گسترعصرنوین-های وب",
+                    "persian_30chars_name": "داده گسترعصرنوین-های وب",
+                    "latin_name": "S*HiWeb",
+                    "industry": "اطلاعات و ارتباطات",
+                    "sub_industry": "خدمات ارزش افزوده",
+                    "yesterday_price": "2789",
+                    "market": "بازار اول (تابلوی فرعی) بورس",
+                    "state": "مجاز",
+                    "last_update_time": "12:30:00",
+                    "first_price": "2752",
+                    "min_price": "2752",
+                    "max_price": "2930",
+                    "close_price": "2900",
+                    "close_price_change": "111",
+                    "close_price_change_percent": "3.83%",
+                    "final_price": "2845",
+                    "final_price_change": "56",
+                    "final_price_change_percent": "1.97%",
+                    "eps": "639",
+                    "highest_price": "2930",
+                    "lowest_price": "2752",
+                    "P:E": "4.45",
+                    "daily_price_high": "2984.00",
+                    "daily_price_low": "2594.00",
+                    "1_sell_count": "1",
+                    "2_sell_count": "1",
+                    "3_sell_count": "1",
+                    "4_sell_count": "2",
+                    "5_sell_count": "1",
+                    "1_buy_count": "1",
+                    "2_buy_count": "1",
+                    "3_buy_count": "2",
+                    "4_buy_count": "2",
+                    "5_buy_count": "1",
+                    "1_buy_price": "2900",
+                    "2_buy_price": "2887",
+                    "3_buy_price": "2878",
+                    "4_buy_price": "2877",
+                    "5_buy_price": "2876",
+                    "1_sell_price": "2909",
+                    "2_sell_price": "2910",
+                    "3_sell_price": "2915",
+                    "4_sell_price": "2916",
+                    "5_sell_price": "2917",
+                    "1_buy_volume": "100000",
+                    "2_buy_volume": "2500",
+                    "3_buy_volume": "46935",
+                    "4_buy_volume": "203000",
+                    "5_buy_volume": "30000",
+                    "1_sell_volume": "2072",
+                    "2_sell_volume": "12636",
+                    "3_sell_volume": "10000",
+                    "4_sell_volume": "17000",
+                    "5_sell_volume": "2000",
+                    "real_buy_count": "519",
+                    "co_buy_count": "9",
+                    "real_sell_count": "413",
+                    "co_sell_count": "2",
+                    "real_buy_volume": "17293230",
+                    "co_buy_volume": "13320545",
+                    "real_sell_volume": "30243801",
+                    "co_sell_volume": "369974",
+                    "basis_volume": "11070943",
+                    "all_stocks": "27677357000",
+                    "trade_volume": "37531100",
+                    "co_buy_value": "37896950525",
+                    "real_buy_value": "49199239350",
+                    "co_sell_value": "1052576030",
+                    "real_sell_value": "86043613845",
+                    "trade_value": "106768901527",
+                    "trade_number": "1841",
+                    "market_value": "78742080665000"
                     },
                 ...
             </pre>
@@ -864,55 +891,61 @@
                     <td>name</td>
                     <td>نام کامل نماد</td>
                     <td>String</td>
-                    <td>ضهای7007</td>
+                    <td>های وب</td>
                     </tr>
                     <tr>
                     <td>instance_code</td>
                     <td>کلید نماد در tse</td>
                     <td>String</td>
-                    <td>99467388766579</td>
+                    <td>43362635835198978</td>
                     </tr>
                     <tr>
                     <td>namad_code</td>
                     <td>کد 12 رقمی نماد</td>
                     <td>String</td>
-                    <td>IRO9HWEB0091</td>
+                    <td>IRO1HWEB0001</td>
                     </tr>
                     <tr>
-                    <td>digits_namad_code</td>
+                    <td>5digits_namad_code</td>
                     <td>کد 5 رقمی نماد</td>
                     <td>String</td>
-                    <td>0H091</td>
+                    <td>HWEB1</td>
                     </tr>
                     <tr>
                     <td>company_code</td>
                     <td>کد 12 رقمی شرکت</td>
                     <td>String</td>
-                    <td>company_code</td>
+                    <td>IRO1HWEB0008</td>
                     </tr>
                     <tr>
                     <td>industry_code</td>
                     <td>کد گروه صنعت</td>
                     <td>String</td>
-                    <td>industry_code</td>
+                    <td>73</td>
                     </tr>
                     <tr>
                     <td>sub_industry_code</td>
                     <td>کد زیر گروه صنعت</td>
                     <td>String</td>
-                    <td>sub_industry_code</td>
+                    <td>7310</td>
                     </tr>
                     <tr>
-                    <td>full_name</td>
-                    <td>نام کامل نماد</td>
+                    <td>company_name</td>
+                    <td>نام شرکت</td>
                     <td>String</td>
                     <td>داده گسترعصرنوین-های وب</td>
+                    </tr>
+                    <tr>
+                    <td>persian_30chars_name</td>
+                    <td>نماد 30 رقمی فارسی</td>
+                    <td>String</td>
+                    <td>اختیارخ های وب-10000-01/07/10</td>
                     </tr>
                     <tr>
                     <td>latin_name</td>
                     <td>نام لاتین شرکت</td>
                     <td>String</td>
-                    <td>HWEB-O-010710</td>
+                    <td>S*HiWeb</td>
                     </tr>
                     <tr>
                     <td>industry</td>
@@ -930,13 +963,13 @@
                     <td>yesterday_price</td>
                     <td>قیمت دیروز</td>
                     <td>String</td>
-                    <td>640</td>
+                    <td>2789</td>
                     </tr>
                     <tr>
                     <td>market</td>
                     <td>بازار</td>
                     <td>String</td>
-                    <td>null</td>
+                    <td>بازار اول (تابلوی فرعی) بورس</td>
                     </tr>
                     <tr>
                     <td>state</td>
@@ -948,241 +981,241 @@
                     <td>last_update_time</td>
                     <td>زمان آخرین آپدیت</td>
                     <td>String</td>
-                    <td>61:04:6</td>
+                    <td>12:30:00</td>
                     </tr>
                     <tr>
                     <td>first_price</td>
                     <td>اولین قیمت</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>2752</td>
                     </tr>
                     <tr>
                     <td>min_price</td>
                     <td>کمترین قیمت</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>2752</td>
                     </tr>
                     <tr>
                     <td>max_price</td>
                     <td>بیشترین قیمت</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>2930</td>
                     </tr>
                     <tr>
                     <td>close_price</td>
                     <td>آخرین قیمت</td>
                     <td>String</td>
-                    <td>640</td>
+                    <td>2900</td>
                     </tr>
                     <tr>
                     <td>close_price_change</td>
                     <td>تغییرات آخرین قیمت</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>111</td>
                     </tr>
                     <tr>
                     <td>close_price_change_percent</td>
                     <td>درصد تغییرات آخرین قیمت</td>
                     <td>String</td>
-                    <td>0.0</td>
+                    <td>3.83%</td>
                     </tr>
                     <tr>
                     <td>final_price</td>
                     <td>قیمت پایانی</td>
                     <td>String</td>
-                    <td>640</td>
+                    <td>2845</td>
                     </tr>
                     <tr>
                     <td>final_price_change</td>
                     <td>تغییرات قیمت پایانی</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>56</td>
                     </tr>
                     <tr>
                     <td>final_price_change_percent</td>
                     <td>درصد تغییرات قیمت پایانی</td>
                     <td>String</td>
-                    <td>0.0</td>
+                    <td>1.97%</td>
                     </tr>
                     <tr>
                     <td>eps</td>
                     <td>eps</td>
                     <td>String</td>
-                    <td></td>
+                    <td>639</td>
                     </tr>
                     <tr>
                     <td>highest_price</td>
                     <td>بالاترین قیمت</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>2930</td>
                     </tr>
                     <tr>
                     <td>lowest_price</td>
                     <td>پایین ترین قیمت</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>2752</td>
                     </tr>
                     <tr>
                     <td>P:E</td>
                     <td>pe</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>4.45</td>
                     </tr>
                     <tr>
                     <td>daily_price_high</td>
                     <td>حداکثر قیمت مجاز روز</td>
                     <td>String</td>
-                    <td>100000.00</td>
+                    <td>2984.00</td>
                     </tr>
                     <tr>
                     <td>daily_price_low</td>
                     <td>حداقل قیمت مجاز روز</td>
                     <td>String</td>
-                    <td>1.00</td>
+                    <td>2594.00</td>
                     </tr>
                     <tr>
                     <td>sell_count_1,2,3,4,5</td>
                     <td>تعداد فروشندگان در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>1</td>
                     </tr>
                     <tr>
                     <td>buy_count_1,2,3,4,5</td>
                     <td>تعداد خریداران در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>2</td>
                     </tr>
                     <tr>
                     <td>buy_price_1,2,3,4,5</td>
                     <td>قیمت خرید  در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>2900</td>
                     </tr>
                     <tr>
                     <td>sell_price_1,2,3,4,5</td>
                     <td>قیمت فروش در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>2909</td>
                     </tr>
                     <tr>
                     <td>buy_volume_1,2,3,4,5</td>
                     <td>حجم خرید در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>100000</td>
                     </tr>
                     <tr>
                     <td>sell_volume_1,2,3,4,5</td>
                     <td>حجم فروش در هر ردیف</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>2072</td>
                     </tr>
                     <tr>
                     <td>real_buy_count</td>
                     <td>تعداد خریداران حقیقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>519</td>
                     </tr>
                     <tr>
                     <td>co_buy_count</td>
                     <td>تعداد خریداران حقوقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>9</td>
                     </tr>
                     <tr>
                     <td>real_sell_count</td>
                     <td>تعداد فروشندگان حقیقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>413</td>
                     </tr>
                     <tr>
                     <td>co_sell_count</td>
                     <td>تعداد فروشندگان حقوقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>2</td>
                     </tr>
                     <tr>
                     <td>real_buy_volume</td>
                     <td>حجم فروش حقیقی ها</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>17293230</td>
                     </tr>
                     <tr>
                     <td>co_buy_volume</td>
                     <td>حجم خرید حقوقی ها</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>13320545</td>
                     </tr>
                     <tr>
                     <td>real_sell_volume</td>
                     <td>حجم فروشندگان حقیقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>30243801</td>
                     </tr>
                     <tr>
                     <td>co_sell_volume</td>
                     <td>حجم فروشندگان حقوقی</td>
                     <td>String</td>
-                    <td>String</td>
+                    <td>369974</td>
                     </tr>
                     <tr>
                     <td>basis_volume</td>
                     <td>حجم مبنا</td>
                     <td>String</td>
-                    <td>1</td>
+                    <td>11070943</td>
                     </tr>
                     <tr>
                     <td>all_stocks</td>
                     <td>تعداد سهام</td>
                     <td>String</td>
-                    <td>3318</td>
+                    <td>27677357000</td>
                     </tr>
                     <tr>
                     <td>trade_volume</td>
                     <td>حجم معاملات</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>37531100</td>
                     </tr>
                     <tr>
                     <td>co_buy_value</td>
                     <td>ارزش خرید حقوقی</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>37896950525</td>
                     </tr>
                     <tr>
                     <td>real_buy_value</td>
                     <td>ارزش خرید حقیقی</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>49199239350</td>
                     </tr>
                     <tr>
                     <td>co_sell_value</td>
                     <td>ارزش فروش حقوقی</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>1052576030</td>
                     </tr>
                     <tr>
                     <td>real_sell_value</td>
                     <td>ارزش فروش حقیقی</td>
-                    <td>الزامی</td>
-                    <td>0</td>
+                    <td>String</td>
+                    <td>86043613845</td>
                     </tr>
                     <tr>
                     <td>trade_value</td>
                     <td>ارزش معاملات</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>106768901527</td>
                     </tr>
                     <tr>
                     <td>trade_number</td>
                     <td>تعداد معاملات</td>
                     <td>String</td>
-                    <td>0</td>
+                    <td>1841</td>
                     </tr>
                     <tr>
                     <td>market_value</td>
                     <td>ارزش بازار</td>
-                    <td>الزامی</td>
-                    <td>2123520</td>
+                    <td>String</td>
+                    <td>78742080665000</td>
                     </tr>
             </tbody>
         </table>
